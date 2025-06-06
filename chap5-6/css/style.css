@@ -2,12 +2,25 @@ body {
   margin: 0;
 }
 
-.header {
-  height: 70px;
+.container-max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
   display: flex;
-  background-color: aqua;
+  height: 70px;
   align-items: center;
   justify-content: space-between;
+}
+
+.header {
+  height: 70px;
+  background-color: aqua;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
 }
 
 .header__logo {
@@ -26,12 +39,12 @@ body {
 .product-list {
   display: flex;
   gap: 20px;
-  /* flex-wrap: wrap; */
-  width: 320px;
+  flex-wrap: wrap;
   overflow: auto;
 }
 
 .product-card {
+  position: relative;
   margin: 10px 0;
   border: 2px solid black;
   padding: 20px;
@@ -39,4 +52,20 @@ body {
   width: 150px;
   height: 200px;
   box-sizing: border-box;
+}
+
+.main {
+  margin-top: 90px;
+}
+
+.product-card__tag {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
 }
