@@ -3,6 +3,7 @@ body {
 }
 
 .container-max-width {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -30,7 +31,6 @@ body {
 }
 
 .header__menu {
-  background-color: yellow;
   width: 300px;
   height: 50px;
 }
@@ -41,6 +41,7 @@ body {
   gap: 20px;
   flex-wrap: wrap;
   overflow: auto;
+  justify-content: center;
 }
 
 .product-card {
@@ -68,4 +69,42 @@ body {
   border-radius: 100%;
   text-align: center;
   line-height: 40px;
+}
+
+.header__nav {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 35px;
+}
+
+.header__nav-item {
+  cursor: pointer;
+  position: relative;
+}
+
+.header__nav-item > a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.header__nav-item > a:hover {
+  color: red;
+}
+
+.header__sub-nav {
+  position: absolute;
+  background-color: bisque;
+  list-style: none;
+  padding-left: 0;
+  width: 200px;
+  display: none;
+}
+
+.header__nav-item:hover .header__sub-nav {
+  display: block;
+}
+
+.header__sub-nav > li:hover {
+  color: chartreuse;
 }
