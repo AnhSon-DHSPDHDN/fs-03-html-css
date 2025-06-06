@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  background-color: aqua;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  background-color: brown;
+  width: 100px;
+  height: 50px;
+}
+
+.header__menu {
+  background-color: yellow;
+  width: 300px;
+  height: 50px;
+}
+
+
+.product-list {
+  display: flex;
+  gap: 20px;
+  /* flex-wrap: wrap; */
+  width: 320px;
+  overflow: auto;
+}
+
+.product-card {
+  margin: 10px 0;
+  border: 2px solid black;
+  padding: 20px;
+  flex-shrink: 0; /* hoac min-width: khong cho co lai */
+  width: 150px;
+  height: 200px;
+  box-sizing: border-box;
+}
