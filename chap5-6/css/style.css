@@ -75,17 +75,20 @@ body {
   display: flex;
   list-style: none;
   justify-content: flex-end;
-  gap: 35px;
+  gap: 10px;
 }
 
 .header__nav-item {
   cursor: pointer;
   position: relative;
+  padding: 0 20px;
 }
 
 .header__nav-item > a {
   text-decoration: none;
   transition: 0.5s;
+  display: block;
+  width: 100px;
 }
 
 .header__nav-item > a:hover {
@@ -107,4 +110,56 @@ body {
 
 .header__sub-nav > li:hover {
   color: chartreuse;
+}
+
+#header__toggle-input {
+  display: none;
+}
+
+#header__toggle-input:checked ~ .header__toggle-btn::after {
+  content: "\2716";
+}
+
+.header__toggle-btn::after {
+  content: "\2630";
+  font-size: 28px;
+}
+
+.header__menu {
+  display: block;
+}
+
+.header__toggle-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header__toggle-btn {
+    display: block;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  #header__toggle-input:checked ~ .header__menu {
+    display: block;
+    position: absolute;
+  }
+
+  #header__toggle-input:checked ~ .header__menu .header__nav {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    background-color: aqua;
+    margin-top: 0;
+  }
+
+  #header__toggle-input:checked ~ .header__menu .header__sub-nav {
+    left: 100%;
+  }
+
+  body:has(#header__toggle-input:checked) .main {
+    margin-top: 300px;
+  }
 }
