@@ -1,0 +1,22 @@
+.full-name {
+  font-family: "Sofia", sans-serif;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.table th,td {
+  border: 1px solid black;
+  padding: 5px 10px;
+}
+
+.table thead, tfoot {
+  background-color: aqua;
+  font-weight: 700;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: gray;
+}
