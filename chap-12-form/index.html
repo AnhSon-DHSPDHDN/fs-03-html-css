@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Login</title>
+  </head>
+  <body>
+    <form action="https://www.google.com/" method="post" target="_blank">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required autocomplete="off" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required />
+      </div>
+      <input type="email" placeholder="Please input email" disabled />
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" min="1" max="120" />
+      </div>
+      <div>
+        <label for="information">Information:</label>
+        <textarea id="information" wrap rows="10" cols="10"></textarea>
+      </div>
+
+      <div>
+        <label>Nation:</label>
+        <label>
+          <input name="nation" value="Vietnam" type="radio" />
+          <span>Viet nam</span>
+        </label>
+        <label>
+          <input name="nation" value="Nuoc ngoai" type="radio" />
+          <span>Nuoc ngoai</span>
+        </label>
+      </div>
+
+      <div>
+        <label>Language:</label>
+        <label>
+          <input name="language" value="Viet" type="checkbox" />
+          <span>Tieng Viet</span>
+        </label>
+        <label>
+          <input name="language" value="Anh" type="checkbox" />
+          <span>Tieng Anh</span>
+        </label>
+      </div>
+
+      <div>
+        <label>Province</label>
+        <select multiple size="4">
+          <option value="1">Quang Tri</option>
+          <option value="2" selected>Hue</option>
+          <option value="3" selected>Da Nang</option>
+          <option value="4">Quang Nam</option>
+        </select>
+      </div>
+
+      <div>
+        <label>Birthday</label>
+        <input type="date" />
+      </div>
+
+      <div>
+        <label>Upload</label>
+        <input type="file" />
+      </div>
+
+      <div>
+        <input
+          type="text"
+          placeholder="phone"
+          title="Phone invalid"
+          pattern="[789][0-9]{9}"
+        />
+      </div>
+
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
